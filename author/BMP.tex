@@ -24,7 +24,7 @@
 
 \def\R{\mathbb{R}}
 \def\N{\mathbb{N}}
-
+\usepackage{url}
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath}       
 \usepackage{caption}
@@ -56,7 +56,7 @@
 % Use \authorrunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
 \institute{Hassan Ballout \at  Cemosis, IRMA UMR 7501, University of Strasbourg, CNRS, \email{hassan.ballout@etu.unistra.fr}
-\and Yvon Maday \at Sorbonne Université, CNRS, Universit\'e Paris Cit\'e, Laboratoire Jacques-Louis Lions
+\and Yvon Maday \at Sorbonne Université, CNRS, Universit\'e Paris Cit\'e, Laboratoire Jacques-Louis Lions
 (LJLL), \\F-75005 Paris, France \email{yvon.maday@sorbonne-universite.fr}
 \and Christophe Prud'homme \at Cemosis, IRMA UMR 7501, Université de Strasbourg, CNRS, \email{prudhomme@unistra.fr}}
 %
@@ -246,7 +246,7 @@ $$ I(N) = \frac{\sum_{i=1}^N \lambda_i}{\sum_{i=1}^M \lambda_i} \geq 1 - \epsilo
 
 \begin{figure}[htbp]
     \centering
-\includegraphics[width=0.7\textwidth] {author/NvsP.png}
+\includegraphics[width=0.7\textwidth] {NvsP.png}
     \caption{Number of reduced basis functions as a function of the parameter dimension for different accuracies}
     \label{fig:NvsP}
 \end{figure}
@@ -291,7 +291,7 @@ The reduced basis space is constructed using POD such that $\epsilon_{POD} = 10^
 
 \begin{figure}[htbp]
     \centering
-\includegraphics[width=1.0\textwidth] {author/RBP1P9.png}
+\includegraphics[width=1.0\textwidth] {RBP1P9.png}
     \caption{Mean relative errors vs number of POD modes for $P = 1$(left) and $P = 9$(right)}
     \label{fig:P1P9errorsVsN}
 \end{figure}
@@ -370,7 +370,7 @@ To finish, we have also numerically investigated the stability of the inverse pr
 
 \section{Recovering the high RB modes from the low ones}
 \label{sec:4}
-After this analysis on the inverse/identification problem, let us come back to the approximation of the functions in ${\matcal S}$. One of the fundamental steps in the nonlinear compressive reduced basis method is the regression task, specifically training a model that accurately predicts the high RB coefficients from the first $n$ independent ones. Both accuracy and performance (prediction cost for approximating the high modes from the low ones) are crucial in this step. Accuracy is vital because any error in this step introduces a corresponding error in the final RB solution. Performance is 
+After this analysis on the inverse/identification problem, let us come back to the approximation of the functions in ${\mathcal S}$. One of the fundamental steps in the nonlinear compressive reduced basis method is the regression task, specifically training a model that accurately predicts the high RB coefficients from the first $n$ independent ones. Both accuracy and performance (prediction cost for approximating the high modes from the low ones) are crucial in this step. Accuracy is vital because any error in this step introduces a corresponding error in the final RB solution. Performance is 
 equally important, as it significantly impacts online performance, especially if the prediction is used iteratively. Another fundamental consideration is the stability of these approximations. An unstable model is more likely to cause divergence in the associated solvers.
 
 
@@ -530,7 +530,7 @@ Going back to the purpose of this paper, we have demonstrated on the low dimensi
 
 \begin{acknowledgement}
 This work has been partially funded by the European Research Council (ERC) under the European
-Union’s Horizon 2020 research and innovation program (grant No 810367), project EMC2 (YM), and the France 2030 NumPEx Exa-MA (ANR-22-EXNU-0002) project managed by the French National Research Agency (ANR).
+Union's Horizon 2020 research and innovation program (grant No 810367), project EMC2 (YM), and the France 2030 NumPEx Exa-MA (ANR-22-EXNU-0002) project managed by the French National Research Agency (ANR).
 
 
 The authors want to thank Gérard Biau, Anthony Nouy and Agustin Somacal for interesting discussions during the preparation of this manuscript.
