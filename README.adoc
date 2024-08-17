@@ -1,0 +1,62 @@
+= Nonlinear compressive reduced basis approximation for multi-parameter elliptic problem
+Hassan Ballout, Yvon Maday, Christophe Prud'homme
+:!figure-caption:
+:version: v1.4.0
+
+[.author]
+Hassan Ballout::
+Cemosis, Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg - CNRS
+email: hassan.ballout@etu.unistra.fr
+
+[.author]
+Yvon Maday::
+Sorbonne Université, CNRS, Université Paris Cité, Laboratoire Jacques-Louis Lions
+(LJLL), F-75005 Paris, France email: yvon.maday@sorbonne-universite.fr
+email: christophe.prudhomme@cemosis.fr
+
+[.author]
+Christophe Prud'homme::
+Cemosis, Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg - CNRS
+email: christophe.prudhomme@cemosis.fr
+
+.Zenodo DOI
+--
+
+--
+
+.GitHub Information
+--
+image:https://img.shields.io/github/v/release/feelpp/article.nl-c-rbm[GitHub Release]
+image:https://img.shields.io/github/actions/workflow/status/feelpp/article.nl-c-rbm/latex.yml[GitHub Actions Workflow Status]
+image:https://img.shields.io/github/downloads/feelpp/article.nl-c-rbm/total[GitHub Downloads (all assets, all releases)]
+--
+
+== Abstract
+
+Reduced basis methods for approximating the solutions of parameter-dependant partial differential equations (PDEs) are based on learning the structure of the set of solutions - seen as a manifold stem:[\mathcal S}] in some functional space - when the parameters vary. This involves investigating the manifold and, in particular, understanding whether it is close to a low-dimensional affine space. This leads to the notion of Kolmogorov $N$-width that consists of evaluating to which extent the best choice of a vectorial space of dimension $N$ approximates stem:[\mathcal S}] well enough. If a good approximation of elements in stem:[\mathcal S}] can be done with some well-chosen vectorial space of dimension $N$ -- provided $N$ is not too large -- then a ``reduced'' basis can be proposed that leads to a Galerkin type method for the approximation of any element in stem:[\mathcal S}]. In many cases, however, the Kolmogorov $N$-width is not so small, even if the parameter set lies in a space of small dimension yielding a manifold with small dimension. In terms of complexity reduction, this gap between the small dimension of the manifold and the large Kolmogorov stem:[N]-width can be explained by the fact that the Kolmogorov $N$-width is linear while, in contrast, the dependency in the parameter is, most often, non-linear. There have been many contributions aiming at reconciling these two statements, either based on deterministic or AI approaches. We investigate here further a new paradigm that, in some sense, merges these two aspects:  the nonlinear compressive reduced basis
+approximation. We focus on a simple multiparameter problem and illustrate rigorously that the complexity associated with the approximation of the solution to the parameter dependant PDE is  directly related to the number of parameters rather than the Kolmogorov $N$-width.
+
+== How to cite
+
+If you use this template, please cite it as follows:
+
+.Chicago style
+[source]
+----
+Christophe Prud'homme. “Feelpp/article.template: Release V1.4.0”. Zenodo, August 5, 2024. https://doi.org/10.5281/zenodo.13224368.
+----
+
+.BibTeX
+[source,bibtex]
+----
+@software{christophe_prud_homme_2024_13224368,
+  author       = {Christophe Prud'homme},
+  title        = {feelpp/article.template: Release v1.4.0},
+  month        = aug,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v1.4.0},
+  doi          = {10.5281/zenodo.13224368},
+  url          = {https://doi.org/10.5281/zenodo.13224368}
+}
+----
