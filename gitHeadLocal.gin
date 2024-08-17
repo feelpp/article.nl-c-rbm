@@ -1,0 +1,17 @@
+\usepackage[%
+        shash={e9d5fc6},
+        lhash={e9d5fc6486073bd216e8e0edac72aa0de8afa137},
+        authname={Christophe Prud'homme},
+        authemail={christophe.prudhomme@cemosis.fr},
+        authsdate={2024-08-17},
+        authidate={2024-08-17 15:17:11 +0200},
+        authudate={1723900631},
+        commname={Christophe Prud'homme},
+        commemail={christophe.prudhomme@cemosis.fr},
+        commsdate={2024-08-17},
+        commidate={2024-08-17 15:17:11 +0200},
+        commudate={1723900631},
+        refnames={ (HEAD -> 1-add-workflow-from-articletemplate)},
+        firsttagdescribe={e9d5fc6},
+        reltag={e9d5fc6}
+    ]{gitexinfo}

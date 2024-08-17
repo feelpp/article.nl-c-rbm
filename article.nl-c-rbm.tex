@@ -31,6 +31,12 @@
 % 
 
 
+\IfFileExists{.git/gitHeadInfo.gin}{
+    \usepackage[pcount,grumpy,mark,markifdirty]{gitinfo2}
+}{%
+    \usepackage[local,pcount,grumpy,mark,markifdirty]{gitinfo2}
+}
+
 
 \newcommand{\TODO}[1]{{\color{red}{#1}}}
 
@@ -128,7 +134,7 @@ We consider the problem of designing a thermal fin to remove heat from a surface
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.5\textwidth]{thermal-fin.png}
+\includegraphics[width=0.5\textwidth]{img-thermal-fin.png}
 \caption{Schematic of a thermal fin showing the structure and important elements, see also \cite{rbpp}.}
 \label{fig:thermal-fin}
 \end{figure}
@@ -246,7 +252,7 @@ $$ I(N) = \frac{\sum_{i=1}^N \lambda_i}{\sum_{i=1}^M \lambda_i} \geq 1 - \epsilo
 
 \begin{figure}[htbp]
     \centering
-\includegraphics[width=0.7\textwidth] {NvsP.png}
+\includegraphics[width=0.7\textwidth] {img-NvsP.png}
     \caption{Number of reduced basis functions as a function of the parameter dimension for different accuracies}
     \label{fig:NvsP}
 \end{figure}
@@ -291,7 +297,7 @@ The reduced basis space is constructed using POD such that $\epsilon_{POD} = 10^
 
 \begin{figure}[htbp]
     \centering
-\includegraphics[width=1.0\textwidth] {RBP1P9.png}
+\includegraphics[width=1.0\textwidth] {img-RBP1P9.png}
     \caption{Mean relative errors vs number of POD modes for $P = 1$(left) and $P = 9$(right)}
     \label{fig:P1P9errorsVsN}
 \end{figure}
@@ -346,7 +352,7 @@ graphically illustrates the simple dependence of the Biot number as a function o
 
 \begin{figure}[!htbp]
     \centering
-\includegraphics[width=0.7\textwidth] {dataP1Inverse.png}
+\includegraphics[width=0.7\textwidth] {img-dataP1Inverse.png}
     \caption{ The Biot number as a function of the first RB coefficient}
     \label{fig:dataP1Inverse}
 \end{figure}
@@ -381,14 +387,14 @@ Starting with the 1-dimensional case ($P=1$), we consider the problem of predict
 For this regression task, we tested several classical ML algorithms, namely decision tree, random forest, spline, and polynomial regression. The training dataset size is $10^7$ for decision tree and random forest models and $10^5$ for polynomial and spline models. In Figure \ref{fig:MLP1}, we can see that splines provide the best accuracy compared to other models. The accuracy of polynomial regression improves with increasing degree due to the oscillatory behavior of the higher RB coefficients (see Figure \ref{fig:dataP1}). The spline model, tuned with hyperparameters (knots=100, degree=10), achieves the best accuracy due to its local adaptability, giving it a significant advantage over polynomials.
 \begin{figure}[!hb]
     \centering
-\includegraphics[width=0.9\textwidth] {dataP1.png}
+\includegraphics[width=0.9\textwidth] {img-dataP1.png}
     \caption{ Higher coefficients as a function of the first coefficient for $P=1$ and $n=1$}.
     \label{fig:dataP1}
 \end{figure}
 
 \begin{figure}[!htbp]
     \centering
-\includegraphics[width=0.7\textwidth] {MLP1.png}
+\includegraphics[width=0.7\textwidth] {img-MLP1.png}
     \caption{Mean absolute error on a test set for different ML models for $P=1$ and $n=1$.}
     \label{fig:MLP1}
 \end{figure}
@@ -411,14 +417,14 @@ While this approach appears to work well with polynomials, it has significant dr
 
 \begin{figure}[!hb]
     \centering
-\includegraphics[width=1.0\textwidth] {P1n.png}
+\includegraphics[width=1.0\textwidth] {img-P1n.png}
     \caption{Mean absolute error for different number of features $n$ and $P=1$}
     \label{fig:P1n}
 \end{figure}
 
 \begin{figure}[!hb]
     \centering
-\includegraphics[width=1.0\textwidth] {stabP1.png}
+\includegraphics[width=1.0\textwidth] {img-stabP1.png}
     \caption{Stability of models for $P=1$, $n=1$ (left panel) and $n=2$ (right panel).}
     \label{fig:stabP1}
 \end{figure}
@@ -432,7 +438,7 @@ For higher parameter dimensions ($P>2$), as seen in section \ref{subsec:3.1}, th
 
 \begin{figure}[!hb]
     \centering
-\includegraphics[width=0.7\textwidth] {MLP2.png}
+\includegraphics[width=0.7\textwidth] {img-MLP2.png}
    \caption{Mean absolute error on a test set for different ML models for $P=2$}
     \label{fig:MLP2}
 \end{figure}
