@@ -2,6 +2,7 @@
 Hassan Ballout, Yvon Maday, Christophe Prud'homme
 :!figure-caption:
 :version: v1.4.0
+:stem: latexmath
 
 [.author]
 Hassan Ballout::
