@@ -98,6 +98,9 @@ jobs:
             ./*.bbl
             ./${{ needs.workflow-setup.outputs.pdf }}
             ./README.adoc
+            ./*.cls
+            ./*.sty
+            ./*.bst
             ./img-*
             ./release
             ./setup-hooks.sh
